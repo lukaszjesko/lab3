@@ -146,7 +146,7 @@ if __name__ == '__main__':
         
         for bill in manager.bills:
             if bill.apartment == apartment.key:
-                print('  ', bill.amount_pln, bill.date_due, bill.settlement_year, bill.settlement_month, bill.type)
+                print('Amount pln: ', bill.amount_pln,'Date due: ',bill.date_due,'Settlement year: ',bill.settlement_year,'Settlement month: ',bill.settlement_month,'Type: ',bill.type)
 #zmianione
     for tenant in manager.tenants.values():
         print(tenant.name, tenant.apartment, tenant.room, tenant.rent_pln, tenant.deposit_pln, tenant.date_agreement_from, tenant.date_agreement_to)
