@@ -81,6 +81,10 @@ class Bill(BaseModel):
             data = json.load(file)
         assert isinstance(data, list), "Expected a list of bills"
         return [Bill(**bill) for bill in data]
+    
+class ApartmentSettlement:
+    
+
 
 
 class Manager:
