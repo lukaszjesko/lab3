@@ -83,7 +83,7 @@ class Bill(BaseModel):
         return [Bill(**bill) for bill in data]
     
 class ApartmentSettlement:
-    mieszkanie = str
+    apartament = str
     miesiac_i_rok = str
     suma_rachunkow = float
     suma_czynszow = float
