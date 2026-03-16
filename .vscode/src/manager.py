@@ -1,0 +1,16 @@
+class Manager:
+    def __init__(self, parameters: Parameters):
+        self.parameters = parameters 
+
+        self.apartments = {}
+        self.tenants = {}
+        self.transfers = []
+        self.bills = []
+       
+        self.load_data()
+
+    def load_data(self):
+        self.apartments = Apartment.from_json_file(self.parameters.apartments_json_path)
+        self.tenants = Tenant.from_json_file(self.parameters.tenants_json_path)
+        self.transfers = Transfer.from_json_file(self.parameters.transfers_json_path)
+        self.bills = Bill.from_json_file(self.parameters.bills_json_path)
