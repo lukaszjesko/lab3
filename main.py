@@ -83,8 +83,19 @@ class Bill(BaseModel):
         return [Bill(**bill) for bill in data]
     
 class ApartmentSettlement:
-    
+    mieszkanie = str
+    miesiac_i_rok = str
+    suma_rachunkow = float
+    suma_czynszow = float
+    reszta = float
 
+    @staticmethod
+    def from_json_file(file_path: str) -> List['ApartmentSettlement']:
+        data = None
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+        assert isinstance(data, list), "Expected a list of apartaments"
+        return [ApartmentSettlement(**apartament) for apartament in data]
 
 
 class Manager:
