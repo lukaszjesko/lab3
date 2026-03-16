@@ -20,4 +20,4 @@ if __name__ == '__main__':
         print(tenant.name, tenant.apartment, tenant.room, tenant.rent_pln, tenant.deposit_pln, tenant.date_agreement_from, tenant.date_agreement_to)
         for transfer in manager.transfers:
             if transfer.tenant == tenant.name:
-                print('  ', transfer.amount_pln, transfer.date, transfer.settlement_year, transfer.settlement_month)
+                print('Amount pln: ', transfer.amount_pln,'Date: ',transfer.date,'Settlement year: ',transfer.settlement_year,'Settlement month: ',transfer.settlement_month)
